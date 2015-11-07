@@ -19,7 +19,24 @@ namespace baldaGitHub
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int x = 5;
+
+            int x = 0;
+            if (radioButton1.Checked)
+            {
+                 x = int.Parse(radioButton1.Text);
+            }
+            if (radioButton2.Checked)
+            {
+                x = int.Parse(radioButton2.Text);
+            }
+            if (radioButton3.Checked)
+            {
+                x = int.Parse(radioButton3.Text);
+            }
+            if (radioButton4.Checked)
+            {
+                x = int.Parse(radioButton4.Text);
+            }
 
             int[][] a = new int[x][];
 
