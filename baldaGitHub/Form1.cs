@@ -61,15 +61,24 @@ namespace baldaGitHub
             dtgrdvw.ColumnCount = max_col;//кол-во колонок
             dtgrdvw.Rows.Add(Mas.Length);
 
+            /* 07/11/15 */
+            dtgrdvw.RowHeadersVisible = false;
+            dtgrdvw.ColumnHeadersVisible = false;
+            /*Kolomytsev*/
+
             //установки для столбцов
             for (int i = 0; i < max_col; i++)
             {
+                /* 07/11/15 
+                Предлагаю удалить:
                 //запрещаем менять значения ячеек
                 dtgrdvw.Columns[i].ReadOnly = true;
-                //отключение режима сортировки элементов столбца
-                dtgrdvw.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
                 //заголовок столбцов
                 dtgrdvw.Columns[i].Name = i.ToString();
+                */
+
+                //отключение режима сортировки элементов столбца
+                dtgrdvw.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dtgrdvw.Columns[i].Width = 25;//ширина столбцов
             }
         }
